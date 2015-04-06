@@ -1,0 +1,7 @@
+@(args: List[String], kwargs: Map[String, Any] = Map())(content: Html)
+
+<div class="menu @for(c <- args) {@c}" @for((k,v) <- kwargs){@k="@v" }>
+    <div class="menu__layout">
+        @content
+    </div>
+</div>
